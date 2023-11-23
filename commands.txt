@@ -1,3 +1,9 @@
 INITIALIZE NPM ON NEW PROJECT
 ===================================================
 npm init --yes
+
+
+GIT COMMANDS
+===================================================
+git clone https://github.com/miltonchandradas/nodejsbasics.git
+
