@@ -1,31 +1,23 @@
-// string
-let name = "Milton";
-
-// number
-let age = 49;
-
-// boolean
-let isMarried = true;
-
-// object: key - value pair
-let car = {
-  model: "Honda",
-  make: "Accord",
-  year: "2023",
+const areaOfSquare = (a) => {
+  return a * a;
 };
 
-// array object
-let hobbies = ["Chess", "Soccer", "Tennis"];
-
-// date object
-let dateOfBirth = new Date("1974-03-07");
-
-// function
-const printMyInfo = (name, age, hobbies) => {
-  console.log(`
-    My name is ${name}
-    I am ${age} years old
-    My hobbies are ${hobbies}`);
+const areaOfRectangle = (l, b) => {
+  return l * b;
 };
 
-printMyInfo(name, age, hobbies);
+let a = 5;
+console.log(
+  `Area of square with side ${a} units is equal to ${areaOfSquare(
+    a
+  )} units squared`
+);
+
+let l = 10;
+let b = 5;
+console.log(
+  `Area of rectange with length ${l} units and breadth ${b} is equal to ${areaOfRectangle(
+    l,
+    b
+  )} units squared`
+);

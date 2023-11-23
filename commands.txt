@@ -7,3 +7,6 @@ GIT COMMANDS
 ===================================================
 git clone https://github.com/miltonchandradas/nodejsbasics.git
 
+git checkout 1_data_types
+git checkout 2_area
+
