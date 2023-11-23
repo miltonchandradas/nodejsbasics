@@ -1,0 +1,3 @@
+INITIALIZE NPM ON NEW PROJECT
+===================================================
+npm init --yes
