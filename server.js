@@ -7,12 +7,9 @@ const people = [
   { name: 'Eva', age: 40 },
 ];
 
-// Using every to check if all people are senior citizens
-const allAreSeniorCitizens = people.every((person) => person.age >= 65);
+// Using reduce to find the average age
+const totalAge = people.reduce((sum, person) => sum + person.age, 0);
+const averageAge = totalAge / people.length;
 
-if (allAreSeniorCitizens) {
-  console.log('All people are senior citizens.');
-} else {
-  console.log('Not all people are senior citizens.');
-}
-// Output: Not all people are senior citizens.
+console.log('Average Age:', averageAge);
+// Output: Average Age: 35.4
