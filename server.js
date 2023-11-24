@@ -7,12 +7,12 @@ const people = [
   { name: 'Eva', age: 40 },
 ];
 
-// Using some to check if there are any senior citizens
-const hasSeniorCitizen = people.some((person) => person.age >= 65);
+// Using every to check if all people are senior citizens
+const allAreSeniorCitizens = people.every((person) => person.age >= 65);
 
-if (hasSeniorCitizen) {
-  console.log('There is at least one senior citizen.');
+if (allAreSeniorCitizens) {
+  console.log('All people are senior citizens.');
 } else {
-  console.log('There are no senior citizens.');
+  console.log('Not all people are senior citizens.');
 }
-// Output: There is at least one senior citizen.
+// Output: Not all people are senior citizens.
