@@ -1,15 +1,12 @@
-// Array of objects representing people
-const people = [
-  { name: 'Alice', age: 25 },
-  { name: 'Bob', age: 17 },
-  { name: 'Charlie', age: 30 },
-  { name: 'David', age: 65 },
-  { name: 'Eva', age: 40 },
-];
+// Array of numbers
+const numbers = [1, 2, 3, 4, 5];
 
-// Using reduce to find the average age
-const totalAge = people.reduce((sum, person) => sum + person.age, 0);
-const averageAge = totalAge / people.length;
+// Using includes to check if the array includes the number 3
+const includesNumberThree = numbers.includes(3);
 
-console.log('Average Age:', averageAge);
-// Output: Average Age: 35.4
+if (includesNumberThree) {
+  console.log('The array includes the number 3.');
+} else {
+  console.log('The array does not include the number 3.');
+}
+// Output: The array includes the number 3.
