@@ -11,5 +11,7 @@ git checkout 1_data_types
 git checkout 2_area
 git checkout 3_area_circle
 git checkout 4_is_even
+git checkout 5_object
+git checkout 6_array
 
 
