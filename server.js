@@ -7,8 +7,13 @@ const people = [
   { name: 'Eva', age: 40 },
 ];
 
-// Using find to get the person with name 'Charlie'
-const charlie = people.find((person) => person.name === 'Charlie');
-
-console.log(charlie);
-// Output: { name: 'Charlie', age: 30 }
+// Using forEach to log the names to the console
+people.forEach((person) => {
+  console.log(person.name);
+});
+// Output:
+// Alice
+// Bob
+// Charlie
+// David
+// Eva
