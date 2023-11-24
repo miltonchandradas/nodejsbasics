@@ -1,8 +1,14 @@
-// Array of numbers
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Array of objects representing people
+const people = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 17 },
+  { name: 'Charlie', age: 30 },
+  { name: 'David', age: 15 },
+  { name: 'Eva', age: 40 },
+];
 
-// Using filter to get even numbers
-const evenNumbers = numbers.filter((number) => number % 2 === 0);
+// Using map to get an array of names
+const names = people.map((person) => person.name);
 
-console.log(evenNumbers);
-// Output: [2, 4, 6, 8, 10]
+console.log(names);
+// Output: ['Alice', 'Bob', 'Charlie', 'David', 'Eva']
