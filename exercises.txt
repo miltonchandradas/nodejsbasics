@@ -1,0 +1,41 @@
+ARRAY EXERCISES
+===================================================
+Exercise 1:
+Create an array of your favorite fruits and then log each fruit to the console.
+
+Exercise 2:
+Given the array of numbers [1, 2, 3, 4, 5], use the map method to create a new array that contains each number squared.
+
+Exercise 3:
+Given the array of strings ['apple', 'banana', 'cherry'], use the join method to create a single string with the fruits separated by a hyphen ("-").
+
+Exercise 4:
+Create an array of numbers [10, 20, 30, 40, 50] and use the filter method to create a new array that includes only numbers greater than or equal to 30.
+
+Exercise 5:
+Given the array of objects representing people:
+
+const people = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 22 },
+];
+Use the find method to find the person with the name 'Bob'.
+
+Exercise 6:
+Given the array of numbers [2, 4, 6, 8, 10], use the reduce method to calculate the product of all numbers.
+
+Exercise 7:
+Create an array of mixed data types, including strings, numbers, and booleans. Use the filter method to create a new array that includes only the numbers.
+
+Exercise 8:
+Given the array of strings ['apple', 'banana', 'cherry'], use the forEach method to log each fruit and its index in the array to the console.
+
+Exercise 9:
+Given the array of numbers [3, 7, 10, 15, 20], use the every method to check if all numbers are greater than 2.
+
+Exercise 10:
+Create an array of numbers and use the includes method to check if a specific number is present in the array.
+
+
+

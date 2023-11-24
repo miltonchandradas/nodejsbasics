@@ -1,0 +1,53 @@
+Exercise 1:
+const favoriteFruits = ['apple', 'banana', 'orange'];
+favoriteFruits.forEach(fruit => console.log(fruit));
+
+
+Exercise 2:
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = numbers.map(number => number ** 2);
+console.log(squaredNumbers);
+
+
+Exercise 3:
+const fruits = ['apple', 'banana', 'cherry'];
+const joinedString = fruits.join('-');
+console.log(joinedString);
+
+Exercise 4:
+const numbers = [10, 20, 30, 40, 50];
+const filteredNumbers = numbers.filter(number => number >= 30);
+console.log(filteredNumbers);
+
+Exercise 5:
+const people = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 22 },
+];
+const personBob = people.find(person => person.name === 'Bob');
+console.log(personBob);
+
+Exercise 6:
+const numbers = [2, 4, 6, 8, 10];
+const product = numbers.reduce((acc, number) => acc * number, 1);
+console.log(product);
+
+Exercise 7:
+const mixedData = ['apple', 5, true, 10, 'banana', false];
+const onlyNumbers = mixedData.filter(item => typeof item === 'number');
+console.log(onlyNumbers);
+
+Exercise 8:
+const fruits = ['apple', 'banana', 'cherry'];
+fruits.forEach((fruit, index) => console.log(`Index ${index}: ${fruit}`));
+
+Exercise 9:
+const numbers = [3, 7, 10, 15, 20];
+const allGreaterThanTwo = numbers.every(number => number > 2);
+console.log(allGreaterThanTwo);
+
+Exercise 10:
+const numbers = [1, 2, 3, 4, 5];
+const includesNumber = numbers.includes(3);
+console.log(includesNumber);
