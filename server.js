@@ -7,8 +7,8 @@ const people = [
   { name: 'Eva', age: 40 },
 ];
 
-// Using map to get an array of names
-const names = people.map((person) => person.name);
+// Using find to get the person with name 'Charlie'
+const charlie = people.find((person) => person.name === 'Charlie');
 
-console.log(names);
-// Output: ['Alice', 'Bob', 'Charlie', 'David', 'Eva']
+console.log(charlie);
+// Output: { name: 'Charlie', age: 30 }
