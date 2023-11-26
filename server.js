@@ -1,26 +1,35 @@
-const axios = require('axios');
+const romanToInteger = (s) => {
+  const romanNumerals = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
 
-// Replace 'YOUR_API_KEY' with your OpenWeatherMap API key
-const apiKey = "2fc30f519447d795197adc505612ad24";
-const city = "Chennai"; // Replace with the desired city name
+  let result = 0;
+  let prevValue = 0;
 
-// OpenWeatherMap API endpoint for current weather
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  for (let i = s.length - 1; i >= 0; i--) {
+    const currentSymbol = s[i];
+    const currentValue = romanNumerals[currentSymbol];
 
-// Function to get weather information
-const getWeather = async () => {
-  // Make a GET request to the OpenWeatherMap API
-  const response = await axios.get(apiUrl);
+    if (currentValue < prevValue) {
+      result -= currentValue;
+    } else {
+      result += currentValue;
+    }
 
-  // Extract relevant information from the response
-  const { name, weather, main } = response.data;
+    prevValue = currentValue;
+  }
 
-  // Log the weather information
-  console.log(`City: ${name}`);
-  console.log(`Weather: ${weather[0].description}`);
-  console.log(`Temperature: ${main.temp}°K`);
-  console.log(`Humidity: ${main.humidity}%`);
+  return result;
 };
 
-// Call the function to get weather information
-getWeather();
+// Example usage
+const romanNumeral = "MCMXCIV";
+const integerEquivalent = romanToInteger(romanNumeral);
+
+console.log(`The integer equivalent of ${romanNumeral} is: ${integerEquivalent}`);
