@@ -1,35 +1,26 @@
-// Array of objects representing people
-const people = [
-  { name: "Alice", age: 25 },
-  { name: "Bob", age: 17 },
-  { name: "Charlie", age: 30 },
-  { name: "David", age: 15 },
-  { name: "Eva", age: 40 },
-];
+const axios = require('axios');
 
-// Using forEach to log the names to the console
-people.forEach((person) => {
-  console.log(person.name);
-});
-// Output:
-// Alice
-// Bob
-// Charlie
-// David
-// Eva
+// Replace 'YOUR_API_KEY' with your OpenWeatherMap API key
+const apiKey = "2fc30f519447d795197adc505612ad24";
+const city = "London"; // Replace with the desired city name
 
-console.log("\n");
+// OpenWeatherMap API endpoint for current weather
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
-// function
-const displayNames = (person) => {
-  console.log(person.name);
+// Function to get weather information
+const getWeather = async () => {
+  // Make a GET request to the OpenWeatherMap API
+  const response = await axios.get(apiUrl);
+
+  // Extract relevant information from the response
+  const { name, weather, main } = response.data;
+
+  // Log the weather information
+  console.log(`City: ${name}`);
+  console.log(`Weather: ${weather[0].description}`);
+  console.log(`Temperature: ${main.temp}°C`);
+  console.log(`Humidity: ${main.humidity}%`);
 };
 
-// Using forEach to log the names to the console
-people.forEach(displayNames);
-// Output:
-// Alice
-// Bob
-// Charlie
-// David
-// Eva
+// Call the function to get weather information
+getWeather();
