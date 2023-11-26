@@ -1,35 +1,22 @@
-const romanToInteger = (s) => {
-  const romanNumerals = {
-    I: 1,
-    V: 5,
-    X: 10,
-    L: 50,
-    C: 100,
-    D: 500,
-    M: 1000,
-  };
+const axios = require("axios");
 
-  let result = 0;
-  let prevValue = 0;
+// Function to make a simple HTTP POST request using Axios
+const postData = async () => {
+  try {
+    const response = await axios.post(
+      "https://jsonplaceholder.typicode.com/posts",
+      {
+        title: "New Post",
+        body: "This is the content of the new post.",
+        userId: 1, // Assuming user ID 1 for the example
+      }
+    );
 
-  for (let i = s.length - 1; i >= 0; i--) {
-    const currentSymbol = s[i];
-    const currentValue = romanNumerals[currentSymbol];
-
-    if (currentValue < prevValue) {
-      result -= currentValue;
-    } else {
-      result += currentValue;
-    }
-
-    prevValue = currentValue;
+    console.log("Post created:", response.data);
+  } catch (error) {
+    console.error("Error creating post:", error.message);
   }
-
-  return result;
 };
 
-// Example usage
-const romanNumeral = "MCMXCIV";
-const integerEquivalent = romanToInteger(romanNumeral);
-
-console.log(`The integer equivalent of ${romanNumeral} is: ${integerEquivalent}`);
+// Call the postData function
+postData();
