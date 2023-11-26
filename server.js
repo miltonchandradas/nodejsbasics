@@ -2,7 +2,7 @@ const axios = require('axios');
 
 // Replace 'YOUR_API_KEY' with your OpenWeatherMap API key
 const apiKey = "2fc30f519447d795197adc505612ad24";
-const city = "London"; // Replace with the desired city name
+const city = "Chennai"; // Replace with the desired city name
 
 // OpenWeatherMap API endpoint for current weather
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
@@ -18,7 +18,7 @@ const getWeather = async () => {
   // Log the weather information
   console.log(`City: ${name}`);
   console.log(`Weather: ${weather[0].description}`);
-  console.log(`Temperature: ${main.temp}°C`);
+  console.log(`Temperature: ${main.temp}°K`);
   console.log(`Humidity: ${main.humidity}%`);
 };
 
